@@ -1,0 +1,102 @@
+/* ----- General Styles ----- */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   margin: 0;
+   background: teal;
+   color: white;
+   font-family: 'Roboto', sans-serif;
+   text-align: center;
+}
+
+h1, h2 {
+   font-weight: 400;
+}
+
+h1 {
+   padding: 1em 0;
+}
+
+a {
+   text-decoration: none;
+   color: #e34234;
+}
+
+a:hover {
+   text-decoration: underline;
+}
+
+/* ----- Section Styles ----- */
+
+.container {
+   position: relative;
+   min-height: 100vh;
+   width: 90%;
+   margin: 0 auto;
+   padding: 1em 0;
+}
+
+form {
+   padding-bottom: 2em;
+}
+
+.weather-card {
+   width: 70%;
+   margin: 0 auto;
+   background-color: white;
+   color: #333333;
+   padding: 1em;
+   border-radius: 10%;
+   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.city-name {
+   font-weight: 500;
+   font-size: 1.728rem;
+}
+
+.country-code {
+   font-size: 0.7rem;
+   font-weight: 400;
+   background-color: #e34234;
+   color: white;
+   padding: 0.2em;
+   border-radius: 20%;
+}
+
+.weather-data {
+   display: flex;
+   justify-content: space-around;
+   padding: 1em 2em;
+}
+
+.weather-data-temp {
+   font-weight: 500;
+   font-size: 4.3rem;
+}
+
+.temp-degrees {
+   font
+}
+
+footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   padding: 1.2em 0;
+}
+
+/* ----- Media Queries ----- */
+
+@media (min-width: 1000px) {
+   footer {
+      padding: 2em 0;
+   }
+}
