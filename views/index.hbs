@@ -16,7 +16,7 @@
 {{#if listExists}}
 <div class="weather-card">
    <h2 class="city-name">{{city}}<span class="country-code">{{country}}</span></h2>
-   <p>ICON</p>
+   <img class="weather-icon" src="{{icon}}" alt="{{data.description}}">
    <div class="weather-data">
       <p class="weather-data-temp">{{data.temp}}<span class="temp-degrees">&deg;C</span></p>
       <p class="weather-data-description">{{data.description}}</p>
