@@ -18,9 +18,9 @@
    <h2 class="city-name">{{city}}<span class="country-code">{{country}}</span></h2>
    <p>ICON</p>
    <div class="weather-data">
-      {{#each data}}
-      <p class="weather-data-temp">{{this}}</p>
-      {{/each}}
+      <p class="weather-data-temp">{{data.temp}}<span class="temp-degrees">&deg;C</span></p>
+      <p class="weather-data-description">{{data.description}}</p>
+      <p class="weather-data-feelsLike">{{data.feelsLike}}&deg;C</p>
    </div>
 </div>
 {{/if}}
