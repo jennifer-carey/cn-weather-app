@@ -21,8 +21,19 @@ app.set("views", path.join(__dirname, "views"));
 
 app.set("view engine", ".hbs");
 
-app.get("/", (req, res) => {
-   res.render("index");
+app.get("/", async(req, res) => {
+   let data = await getWeather(`${process.env.CITY}`, `${process.env.CODE}`);
+   let city = data.name;
+   let country = data.sys.country;
+   let temp = data.main.temp;
+   let description = data.weather[0].description;
+   let feelsLike = data.main.feels_like;
+   res.render("index", {
+      city, 
+      country, 
+      data: {temp, description, feelsLike}, 
+      listExists: true
+   });
 });
 
 app.post("/", async(req, res) => {
