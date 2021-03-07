@@ -20,13 +20,18 @@ app.get("/", (req, res) => {
    res.render("index");
 });
 
-// app.post("/", (req, res) => {
-//    let data = getWeather();
+// app.post("/", async(req, res) => {
+//    let data = await getWeather();
+// let city = data.name;
+// let country = data.sys.country;
+// let temp = data.main.temp;
+// let description = data.weather[0].description;
+// let feelsLike = data.main.feels_like;
 //    if (data.cod == "404") {
 //       res.render("/");
 //       return;
 //    }
-//    res.render()
+//    res.render("index", {city, country, data: {temp, description, feelsLike}, listExists: true});
 // })
 
 app.get("*", (req, res) => {
