@@ -1,6 +1,7 @@
 const express = require("express");
 const hbs = require("express-handlebars");
 // const path = require("path");
+const getWeather = require("./lib/getWeather");
 
 const app = express();
 
@@ -16,6 +17,11 @@ app.set("view engine", ".hbs");
 app.get("/", (req, res) => {
    res.render("index");
 });
+
+app.post("/", (req, res) => {
+   let data = getWeather();
+   res.render()
+})
 
 app.get("*", (req, res) => {
    res.render("404");
