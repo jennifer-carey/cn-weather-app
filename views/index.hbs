@@ -14,12 +14,12 @@
 {{/if}}
 {{#if listExists}}
 <div class="weather-card">
-   <h2 class="city-name">{{name}}<span class="country-code">{{data.sys.country}}</span></h2>
+   <h2 class="city-name">{{city}}<span class="country-code">{{country}}</span></h2>
    <p>ICON</p>
    <div class="weather-data">
-      <p class="weather-data-temp">some data</p>
-      <p class="weather-data-temp">some data</p>
-      <p class="weather-data-temp">some data</p>
+      {{#each data}}
+      <p class="weather-data-temp">{{this}}</p>
+      {{/each}}
    </div>
 </div>
 {{/if}}
