@@ -27,7 +27,8 @@ app.get("/", (req, res) => {
 
 app.post("/", async(req, res) => {
    let location = req.body.location;
-   let data = await getWeather(location);
+   let code = req.body.countryCode;
+   let data = await getWeather(location, code);
    if (data.cod == "404") {
       res.render("index", {
          err: `We can't find that location, please try again.`
