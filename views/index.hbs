@@ -1,15 +1,14 @@
 <h1>Give me today's weather in...</h1>
 
 <form action="/" method="POST">
-   <input type="text" name="location" value="Search a city">
-   <input type="text" name="countryCode" value="Enter country code">
+   <input type="text" name="location" onfocus="this.value=''" value="Search a city">
+   <input type="text" name="countryCode" onfocus="this.value=''" value="Enter country code">
    <button type="submit" value="submit">GO!</button>
 </form>
 
 {{#if err}}
 <div class="weather-card weather-card-err">
    <h2>OOPS!</h2>
-   <p>ICON</p>
    <p>{{err}}</p>
 </div>
 {{/if}}
