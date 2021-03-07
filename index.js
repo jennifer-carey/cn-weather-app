@@ -1,9 +1,14 @@
 const express = require("express");
 const hbs = require("express-handlebars");
 const path = require("path");
+const bodyParser = require("body-parser");
+
 const getWeather = require("./lib/getWeather");
 
 const app = express();
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -20,19 +25,27 @@ app.get("/", (req, res) => {
    res.render("index");
 });
 
-// app.post("/", async(req, res) => {
-//    let data = await getWeather();
-// let city = data.name;
-// let country = data.sys.country;
-// let temp = data.main.temp;
-// let description = data.weather[0].description;
-// let feelsLike = data.main.feels_like;
-//    if (data.cod == "404") {
-//       res.render("/");
-//       return;
-//    }
-//    res.render("index", {city, country, data: {temp, description, feelsLike}, listExists: true});
-// })
+app.post("/", async(req, res) => {
+   let location = req.body.location;
+   let data = await getWeather(location);
+   if (data.cod == "404") {
+      res.render("index", {
+         err: `We can't find that location, please try again.`
+      });
+      return;
+   }
+   let city = data.name;
+   let country = data.sys.country;
+   let temp = data.main.temp;
+   let description = data.weather[0].description;
+   let feelsLike = data.main.feels_like;
+   res.render("index", {
+      city, 
+      country, 
+      data: {temp, description, feelsLike}, 
+      listExists: true
+   });
+});
 
 app.get("*", (req, res) => {
    res.render("404");
