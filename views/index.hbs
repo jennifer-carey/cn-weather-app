@@ -14,12 +14,16 @@
 {{/if}}
 {{#if listExists}}
 <div class="weather-card">
-   <h2 class="city-name">{{city}}<span class="country-code">{{country}}</span></h2>
+   <h2 class="city-name">{{city}} <span class="country-code">{{country}}</span></h2>
    <img class="weather-icon" src="{{icon}}" alt="{{data.description}}">
    <div class="weather-data">
-      <p class="weather-data-temp">{{data.temp}}<span class="temp-degrees">&deg;C</span></p>
-      <p class="weather-data-description">{{data.description}}</p>
-      <p class="weather-data-feelsLike">{{data.feelsLike}}&deg;C</p>
+      <div class="weather-data-element">
+         <p><span class="weather-data-temp">{{data.temp}}</span> <span class="temp-degrees">&deg;C</span></p>
+      </div>
+      <div class="weather-data-element">
+         <p class="weather-data-description">{{data.description}}</p>
+         <p class="weather-data-feelsLike">{{data.feelsLike}}&deg;C</p>
+      </div>
    </div>
 </div>
 {{/if}}
