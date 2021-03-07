@@ -2,6 +2,7 @@
 
 <form action="/" method="POST">
    <input type="text" name="location" value="Search a city">
+   <input type="text" name="countryCode" value="Enter country code">
    <button type="submit" value="submit">GO!</button>
 </form>
 
@@ -17,9 +18,9 @@
    <h2 class="city-name">{{city}}<span class="country-code">{{country}}</span></h2>
    <p>ICON</p>
    <div class="weather-data">
-      <p class="weather-data-temp">{{temp}}</p>
-      <p class="weather-data-temp">{{description}}</p>
-      <p class="weather-data-temp">{{feelsLike}}</p>
+      {{#each data}}
+      <p class="weather-data-temp">{{this}}</p>
+      {{/each}}
    </div>
 </div>
 {{/if}}
