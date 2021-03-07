@@ -1,7 +1,7 @@
 <h1>Give me today's weather in...</h1>
 
 <form action="/" method="POST">
-   <input type="text" value="Search a city">
+   <input type="text" name="location" value="Search a city">
    <button type="submit" value="submit">GO!</button>
 </form>
 
@@ -9,7 +9,7 @@
 <div class="weather-card weather-card-err">
    <h2>OOPS!</h2>
    <p>ICON</p>
-   <p>We can't find that location, please try again.</p>
+   <p>{{err}}</p>
 </div>
 {{/if}}
 {{#if listExists}}
@@ -17,9 +17,9 @@
    <h2 class="city-name">{{city}}<span class="country-code">{{country}}</span></h2>
    <p>ICON</p>
    <div class="weather-data">
-      {{#each data}}
-      <p class="weather-data-temp">{{this}}</p>
-      {{/each}}
+      <p class="weather-data-temp">{{temp}}</p>
+      <p class="weather-data-temp">{{description}}</p>
+      <p class="weather-data-temp">{{feelsLike}}</p>
    </div>
 </div>
 {{/if}}
