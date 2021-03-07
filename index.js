@@ -6,8 +6,6 @@ const bodyParser = require("body-parser");
 const indexRouter = require("./routes/indexRouter");
 const errRouter = require("./routes/errRouter");
 
-const getWeather = require("./lib/getWeather");
-
 const app = express();
 
 app.use(bodyParser.urlencoded({extended: false}));
