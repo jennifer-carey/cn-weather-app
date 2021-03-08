@@ -1,6 +1,6 @@
 /* ----- General Styles ----- */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
 
 * {
    box-sizing: border-box;
@@ -10,23 +10,21 @@
 
 body {
    margin: 0;
-   background: teal;
-   color: white;
-   font-family: 'Roboto', sans-serif;
+   background: white;
+   color: #333333;
+   font-family: 'Quicksand', sans-serif;
    text-align: center;
 }
 
-h1, h2 {
-   font-weight: 400;
-}
-
 h1 {
-   padding: 1em 0;
+   font-size: 2rem;
+   padding: 0.5em 0;
+   font-weight: 500;
 }
 
 a {
    text-decoration: none;
-   color: #e34234;
+   color: #427bff;
 }
 
 a:hover {
@@ -38,43 +36,79 @@ a:hover {
 .container {
    position: relative;
    min-height: 100vh;
-   width: 90%;
+   width: 80%;
    margin: 0 auto;
    padding: 1em 0;
 }
 
 form {
-   padding-bottom: 2em;
+   padding-bottom: 1em;
+   display: flex;
+   flex-direction: column;
+}
+
+input, button {
+   font-family: 'Quicksand', sans-serif;
+   font-size: 1.1rem;
+}
+
+input {
+   width: 100%;
+   border: 1px solid lightslategray;
+   border-radius: 2px;
+   padding: 0.5em;
+   margin-bottom: 0.5em;
+   color: #333333;
+}
+
+button {
+   width: 100%;
+   background-color: #ffc01f;
+   color: white;
+   font-weight: 500;
+   border: none;
+   border-radius: 2px;
+   padding: 0.5em;
 }
 
 .weather-card {
-   width: 70%;
    margin: 0 auto;
-   background-color: white;
-   color: #333333;
-   padding: 1em;
-   border-radius: 10%;
+   background-color: #427bff;
+   color: white;
+   padding: 3em 2em;
+   border-radius: 15px;
    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 }
 
 .city-name {
    font-weight: 500;
-   font-size: 1.728rem;
+   font-size: 2rem;
+   padding-bottom: 0.5em;
+   display: flex;
+   justify-content: center;
 }
 
 .country-code {
    font-size: 0.7rem;
    font-weight: 400;
-   background-color: #e34234;
+   background-color: #ffc01f;
    color: white;
    padding: 0.2em;
+   margin-left: 0.5em;
    border-radius: 20%;
+   align-self: flex-start;
 }
 
 .weather-data {
    display: flex;
    justify-content: space-around;
-   padding: 1em 2em;
+}
+
+.weather-data-element-2 {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: space-evenly;
 }
 
 .weather-data-temp {
@@ -83,14 +117,16 @@ form {
 }
 
 .temp-degrees {
-   font
+   font-weight: 500;
+   font-size: 2rem;
 }
 
 footer {
    position: absolute;
    bottom: 0;
    width: 100%;
-   padding: 1.2em 0;
+   font-size: 0.7rem;
+   padding: 1em 0;
 }
 
 /* ----- Media Queries ----- */
