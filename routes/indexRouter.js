@@ -33,9 +33,9 @@ router.post("/", async(req, res) => {
    let city = data.name;
    let country = data.sys.country;
    let icon = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-   let temp = data.main.temp;
+   let temp = Math.round(data.main.temp);
    let description = data.weather[0].description;
-   let feelsLike = data.main.feels_like;
+   let feelsLike = Math.round(data.main.feels_like);
    res.render("index", {
       city, 
       country, 
