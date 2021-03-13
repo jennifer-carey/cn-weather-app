@@ -1,5 +1,6 @@
-## Weather App
+## Weather App accessing OpenWeather API
 
-A weather app created using Express.js with Handlebars. 
+This weather app project was designed to create an app would would fetch data from a secure API key and was built using Express.js with Handlebars. 
 
-Data is accessed using a secure API key.
+I designed the app to be fully responsive with the layout adapting to mobile, tablet and desktop displays.
+
