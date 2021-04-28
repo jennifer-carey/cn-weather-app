@@ -4,7 +4,7 @@ const router = express.Router();
 const getWeather = require("../lib/getWeather");
 
 const processWeatherData = async (city, code) => {
-   const data = await getWeather(`${process.env.CITY}`, `${process.env.CODE}`);
+   const data = await getWeather(city, code);
 
    if (data.cod == "404") {
       return {err: `We can't find that location, please try again.`}
