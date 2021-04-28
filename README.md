@@ -8,7 +8,7 @@ I designed the app to be fully responsive with the layout adapting to mobile, ta
 
 ### Screenshots
 
-![Weather App Screen Shot](https://github.com/jennifer-carey/cn-weather-app/public/images/weather-mockup-grey.jpg)
+![Weather App Screen Shot](https://github.com/jennifer-carey/cn-weather-app/blob/main/public/images/weather-mockup-grey.jpg)
 
 ### Built with
 
